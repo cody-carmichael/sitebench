@@ -1,0 +1,13 @@
+# Python and Jupyter clutter
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+.env
+.DS_Store
+
+# Data and trained models are too big for git and can be regenerated,
+# but keep the empty folders so the structure survives a fresh clone
+data/raw/*
+data/processed/*
+models/*
+!**/.gitkeep
