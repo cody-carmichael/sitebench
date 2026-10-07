@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+src/sitebench/__init__.py
+src/sitebench.egg-info/PKG-INFO
+src/sitebench.egg-info/SOURCES.txt
+src/sitebench.egg-info/dependency_links.txt
+src/sitebench.egg-info/top_level.txt
