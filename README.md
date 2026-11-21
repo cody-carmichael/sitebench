@@ -29,3 +29,16 @@ Why:
 - **Outlier:**
 - **Training / validation / test set:**
 - **Data leakage:**
+
+## Phase 3 results: decision tree (validation set)
+Risk levels from training percentiles: low < 1.67, medium 1.67 to 11.28, high >= 11.28 (top 10%).
+Scores below are for the high-risk class. Base rate: 10% of sites are high risk.
+
+| Model | Leaves | Sites flagged high | High recall | High precision | F1 | F2 |
+|---|---|---|---|---|---|---|
+| Depth 5, default rule | 32 | 0.5% | 4.3% | 85.5% | 0.08 | 0.05 |
+| Depth 5, class_weight balanced | n/a | 19.3% | 40.0% | 20.9% | 0.27 | 0.34 |
+| Depth 5, high if P(high) >= 0.15 | 32 | 14.6% | 29.8% | 20.6% | 0.24 | 0.27 |
+| Depth 5 + pruning (alpha 0.0005), high if P(high) >= 0.15 | 17 | about 17% | 33.3% | 19.7% | 0.25 | 0.29 |
+
+Profile-only features limit how well any model can separate high-risk sites; a flag is a screening signal, not a verdict.
